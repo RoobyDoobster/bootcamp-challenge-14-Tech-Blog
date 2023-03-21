@@ -1,0 +1,17 @@
+<div id={{post.id}}>
+    <div>
+        <h3>{{post.title}}</h3>
+        <p>Posted by {{post.user.username}} on {{post.createdAt}}</p>
+    </div>
+    <p>{{post.content}}</p>
+    {{#if post.comments}}
+    <ul>
+        {{#each post.comments as |comment|}}
+        <li>
+            <p>{{comment.text}}</p>
+            <p>- {{comment.user.username}}, {{comment.createdAt}}</p>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</div>

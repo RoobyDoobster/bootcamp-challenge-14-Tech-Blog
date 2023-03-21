@@ -1,0 +1,13 @@
+<ul>
+    {{#each posts as |post|}}
+    <li id="{{post.id}}">
+        <div>
+            <h3>{{post.title}}</h3>
+            <p>Posted by {{post.user.username}} on {{post.createdAt}}</p>
+        </div>
+        <p>{{post.content}}</p>
+    </li>
+    {{/each}}
+</ul>
+
+<script src="./js/homepage.js"></script>
